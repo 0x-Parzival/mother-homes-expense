@@ -1,0 +1,180 @@
+{
+  "identity": {
+    "name": "E1",
+    "role": "Creative Designer",
+    "philosophy": "Fusion over Imitation. Emotion First. Content is King.",
+    "anti_patterns": [
+      "Generic 'Inter' everywhere",
+      "Center-everything layouts",
+      "Gradient overload",
+      "Teal/Purple generic SaaS colors"
+    ]
+  },
+  "project_context": {
+    "app_name": "Mother Homes",
+    "app_type": "Financial Dashboard & Property Management",
+    "target_audience": "PG Business Owners",
+    "emotional_tone": "Trust, Precision, Growth, Control",
+    "visual_style": "Swiss Financial Zen (Structured, High-Contrast, Earthy Accents)"
+  },
+  "design_system": {
+    "typography": {
+      "headings": {
+        "family": "Manrope, sans-serif",
+        "weights": ["600", "700", "800"],
+        "usage": "Page titles, Section headers, Key metrics",
+        "letter_spacing": "-0.02em"
+      },
+      "body": {
+        "family": "IBM Plex Sans, sans-serif",
+        "weights": ["400", "500"],
+        "usage": "General text, Labels, Form inputs"
+      },
+      "mono": {
+        "family": "JetBrains Mono, monospace",
+        "weights": ["400", "500"],
+        "usage": "Financial data, IDs, Dates, Tabular numbers"
+      },
+      "import_url": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    },
+    "colors": {
+      "palette_name": "Financial Zen",
+      "primary": {
+        "DEFAULT": "#14532d",
+        "foreground": "#ffffff",
+        "description": "Deep Forest Green - Represents stability, growth, and currency."
+      },
+      "secondary": {
+        "DEFAULT": "#c2410c",
+        "foreground": "#ffffff",
+        "description": "Terracotta/Burnt Orange - Represents the 'home' aspect, warmth, and action."
+      },
+      "accent": {
+        "DEFAULT": "#f0fdf4",
+        "foreground": "#14532d",
+        "description": "Pale Mint - For backgrounds of active states or success indicators."
+      },
+      "background": {
+        "DEFAULT": "#f8fafc",
+        "description": "Slate 50 - A cool, professional off-white. Never pure white for main bg."
+      },
+      "surface": {
+        "DEFAULT": "#ffffff",
+        "description": "Pure white for cards and panels."
+      },
+      "muted": {
+        "DEFAULT": "#f1f5f9",
+        "foreground": "#64748b"
+      },
+      "border": {
+        "DEFAULT": "#e2e8f0"
+      },
+      "charts": {
+        "profit": "#10b981",
+        "expense": "#ef4444",
+        "income": "#3b82f6",
+        "occupancy": "#f59e0b"
+      }
+    },
+    "spacing": {
+      "scale": "Generous",
+      "container_padding": "p-6 md:p-8 lg:p-12",
+      "element_gap": "gap-6",
+      "section_gap": "gap-12"
+    },
+    "radius": {
+      "default": "0.5rem",
+      "sm": "0.3rem",
+      "lg": "0.75rem",
+      "pill": "9999px"
+    },
+    "shadows": {
+      "card": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
+      "hover": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+      "dropdown": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)"
+    }
+  },
+  "layout_strategies": {
+    "dashboard_grid": {
+      "type": "Bento Grid / Control Room",
+      "columns": "grid-cols-1 md:grid-cols-12",
+      "gap": "gap-6",
+      "rules": [
+        "Total Profit Card: col-span-full md:col-span-4 lg:col-span-3",
+        "Main Chart: col-span-full md:col-span-8 lg:col-span-9",
+        "Recent Activity: col-span-full md:col-span-4 lg:col-span-4",
+        "Quick Actions: col-span-full md:col-span-8 lg:col-span-8"
+      ]
+    },
+    "list_view": {
+      "style": "Dense Table",
+      "density": "compact",
+      "visuals": "No vertical borders, only horizontal dividers. Zebra striping optional but preferred for >10 rows."
+    }
+  },
+  "component_rules": {
+    "cards": {
+      "style": "Flat with crisp border",
+      "classes": "bg-white border border-slate-200 shadow-sm rounded-lg",
+      "hover_effect": "hover:border-primary/50 transition-colors duration-200"
+    },
+    "buttons": {
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm font-medium rounded-md px-4 py-2",
+      "secondary": "bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 font-medium rounded-md px-4 py-2",
+      "destructive": "bg-red-50 text-red-600 hover:bg-red-100 border border-red-100 font-medium rounded-md px-4 py-2"
+    },
+    "inputs": {
+      "style": "Minimalist",
+      "classes": "border-slate-200 focus:border-primary focus:ring-primary/20 rounded-md bg-white"
+    },
+    "charts": {
+      "library": "Recharts (via Shadcn)",
+      "style": "Minimalist, no grid lines (or very subtle), clear tooltips."
+    }
+  },
+  "assets": {
+    "images": {
+      "login_background": {
+        "url": "https://images.pexels.com/photos/5716001/pexels-photo-5716001.jpeg",
+        "alt": "Professional team meeting",
+        "usage": "Cover image for the login/signup split screen."
+      },
+      "dashboard_empty_state": {
+        "url": "https://images.pexels.com/photos/7172774/pexels-photo-7172774.jpeg",
+        "alt": "Abstract growth graph",
+        "usage": "Displayed when no data is available in charts."
+      },
+      "logo": {
+        "instruction": "Use the user-provided logo. If not found, look for 'logo.png' in public folder or use a text-based fallback with Manrope font."
+      }
+    },
+    "icons": {
+      "library": "lucide-react",
+      "style": "Stroke width 1.5px or 2px depending on size. Color: Slate-600 for inactive, Primary for active."
+    }
+  },
+  "universal_guidelines": {
+    "general": [
+      "Do not use gradients for backgrounds, use solid colors or subtle noise textures.",
+      "Ensure all text has sufficient contrast (APCA/WCAG AA).",
+      "Use 'data-testid' on all interactive elements.",
+      "Do not center-align main dashboard content; use left alignment for readability.",
+      "Use 'sonner' for toast notifications.",
+      "Use 'date-fns' for date formatting."
+    ],
+    "motion": {
+      "hover": "transition-all duration-200 ease-in-out",
+      "enter": "animate-in fade-in slide-in-from-bottom-4 duration-500",
+      "exit": "animate-out fade-out slide-out-to-bottom-4 duration-300"
+    }
+  },
+  "instructions_to_main_agent": [
+    "1. Install necessary dependencies: 'recharts', 'lucide-react', 'date-fns', 'jspdf', 'jspdf-autotable' (for PDF generation).",
+    "2. Update 'tailwind.config.js' to include the custom colors defined in 'design_system.colors'.",
+    "3. Create a 'Layout' component that includes the Sidebar and Topbar.",
+    "4. Implement the 'Dashboard' using the 'Bento Grid' strategy.",
+    "5. Ensure the 'Reports' page uses 'jspdf' to generate the PDF as requested.",
+    "6. Use the provided image URLs for the login page and empty states.",
+    "7. MOCK DATA: Since the backend might not be ready, create a 'mockData.js' file to populate the dashboard with realistic financial data for demonstration."
+  ]
+}
